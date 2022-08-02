@@ -11,8 +11,12 @@ export const getError = (err) => ({ type: 'GET_ERROR', err });
 export const getCurrenciesData = () => async (dispatch) => {
   try {
     const obj = await getCurrencyInfo();
-    dispatch(getCurrencies(obj));
+    const objectData = Object.keys(obj).filter((coin) => coin !== 'USDT');
+    dispatch(getCurrencies(objectData));
   } catch (err) {
     dispatch(getError(err));
   }
 };
+
+// EXPENSES
+export const getExpenses = (expenses) => ({ type: 'GET_EXPENSES', expenses });
