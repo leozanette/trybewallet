@@ -20,3 +20,6 @@ export const getCurrenciesData = () => async (dispatch) => {
 
 // EXPENSES
 export const getExpenses = (expenses) => ({ type: 'GET_EXPENSES', expenses });
+
+// DELETE BUTTON
+export const deleteButton = (expense) => ({ type: 'DELETE_EXPENSE', expense });
