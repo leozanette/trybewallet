@@ -49,9 +49,11 @@ class Login extends React.Component {
             value={ email }
             name="email"
             onChange={ this.handlechange }
+            aria-label="email"
           />
           <input
             type="password"
+            aria-label="password"
             data-testid="password-input"
             minLength={ 6 }
             name="password"
